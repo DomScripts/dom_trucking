@@ -1,2 +1,6 @@
 local Inventory = exports.ox_inventory
-local Target = exports.ox_target
+
+RegisterNetEvent('dom_trucking:Reward', function()
+    local random = math.random(Config.Reward.AmountMin, Config.Reward.AmountMax)
+    Inventory:AddItem(source, Config.Reward.Reward, random)
+end)
